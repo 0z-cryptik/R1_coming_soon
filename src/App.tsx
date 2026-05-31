@@ -9,6 +9,7 @@ function App() {
       <div>
         <img
           src={Logo}
+          id="Logo"
           alt=""
           width={700}
         />

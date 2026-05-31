@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@keyframes spinAndBounce {
+  /* Start at normal size */
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  
+  /* 1. Fast shrink down to 0.3. 
+     Notice it spins 2 full rotations (720deg) in just 20% of the time. This makes it look incredibly fast. */
+  20% {
+    transform: scale(0.3) rotate(720deg);
+  }
+  
+  /* 2. Hold the small size and keep spinning fast for a brief moment */
+  35% {
+    transform: scale(0.3) rotate(1440deg);
+  }
+  
+  /* 3. Sudden explosive burst to scale(2.0).
+     The spinning slows down drastically here (only rotating 180 degrees from step 2 to step 4) */
+  75% {
+    transform: scale(2) rotate(1620deg);
+  }
+  
+  /* 4. Snap back down to normal size and settle completely */
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+img#Logo {
+  /* Running once (no infinite) and using ease-out so the final snap feels crisp */
+  animation: spinAndBounce 2.5s ease-out forwards;
+}
