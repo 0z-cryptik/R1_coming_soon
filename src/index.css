@@ -1,40 +1,25 @@
 @import "tailwindcss";
 
-@keyframes spinAndBounce {
-  /* Start at normal size */
-  0% {
-    transform: scale(0.5) rotate(0deg);
+@keyframes Pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  /* 1. Fast shrink down to 0.3. 
-     Notice it spins 2 full rotations (720deg) in just 20% of the time. This makes it look incredibly fast. */
-  20% {
-    transform: scale(0.3) rotate(720deg);
+
+  10%, 30%, 50%, 70%, 90% {
+    opacity: 0;
+    transform: scale(1.1);
   }
-  
-  /* 2. Hold the small size and keep spinning fast for a brief moment */
-  35% {
-    transform: scale(0.3) rotate(1440deg);
-  }
-  
-  /* 3. Sudden explosive burst to scale(2.0).
-     The spinning slows down drastically here (only rotating 180 degrees from step 2 to step 4) */
-  75% {
-    transform: scale(2) rotate(1620deg);
-  }
-  
-  /* 4. Snap back down to normal size and settle completely */
-  100% {
-    transform: scale(1) rotate(0deg);
+
+  20%, 40%, 60%, 80% {
+    opacity: 1;
+    transform: scale(1.15);
   }
 }
 
 img#Logo {
-  /* Running once (no infinite) and using ease-out so the final snap feels crisp */
-  animation: spinAndBounce 2.5s ease-out forwards;
+  animation: Pulse 2.5s linear forwards;
 }
-
-/* ... keep your existing logo animation code here ... */
 
 @keyframes marquee {
   0% {
@@ -48,6 +33,5 @@ img#Logo {
 }
 
 p {
-  /* Adjust '15s' to make it faster or slower. 'linear' keeps the speed constant. */
   animation: marquee 15s linear infinite;
 }
