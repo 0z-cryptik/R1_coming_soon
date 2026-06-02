@@ -4,7 +4,7 @@ import BackgroundImage from "./assets/BG_image_1.jpg";
 function App() {
   return (
     <main
-      className="w-screen h-screen relative flex items-center justify-center bg-[55%_60%] bg-no-repeat overflow-hidden"
+      className="w-screen h-screen relative flex items-center justify-center bg-[75%_60%] lg:bg-[55%_60%] bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${BackgroundImage})` }}>
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <img
