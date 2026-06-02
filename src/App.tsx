@@ -15,7 +15,7 @@ function App() {
         />
       </div>
       <div className="absolute left-0 bottom-16 w-screen overflow-hidden z-50">
-        <p className="whitespace-nowrap tracking-wide text-white font-extrabold text-4xl">
+        <p className="whitespace-nowrap tracking-wide text-white font-extrabold text-4xl w-max">
           R1 WE RUN D STREETS, COMING SOON!!!, WATCH THIS SPACE
         </p>
       </div>
