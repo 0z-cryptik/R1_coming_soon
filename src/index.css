@@ -3,7 +3,7 @@
 @keyframes spinAndBounce {
   /* Start at normal size */
   0% {
-    transform: scale(1) rotate(0deg);
+    transform: scale(0.5) rotate(0deg);
   }
   
   /* 1. Fast shrink down to 0.3. 
@@ -32,4 +32,22 @@
 img#Logo {
   /* Running once (no infinite) and using ease-out so the final snap feels crisp */
   animation: spinAndBounce 2.5s ease-out forwards;
+}
+
+/* ... keep your existing logo animation code here ... */
+
+@keyframes marquee {
+  0% {
+    /* Start completely off-screen to the right */
+    transform: translateX(100vw);
+  }
+  100% {
+    /* End completely off-screen to the left */
+    transform: translateX(-100%);
+  }
+}
+
+p {
+  /* Adjust '15s' to make it faster or slower. 'linear' keeps the speed constant. */
+  animation: marquee 15s linear infinite;
 }
